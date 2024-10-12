@@ -7,12 +7,6 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 <body class="bg-gray-900 text-white">
   <!-- Header Section -->
@@ -37,52 +31,58 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="min-h-screen flex items-center justify-center p-6 md:p-10 bg-gray-800 bg-opacity-80">
-    <div class="max-w-3xl text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
-      <p class="text-lg leading-relaxed mb-4">
-        As an IT Technician at PT Leader IT Service Solutions, I am dedicated to deploying and maintaining mission-critical applications, including the advanced Ewacs Pro system. My responsibilities involve intricate tasks like UMPC installation, data management, and troubleshooting, enhancing my skills in IP networking and system maintenance. 
-        I also gained valuable experience as a subcontractor for PT PAMA PERSADA NUSANTARA at the KPC Bengalon site, developing expertise in operational support and technology implementation.
-      </p>
-      <p class="text-lg mb-4">
-        Currently pursuing a Bachelor's degree in Information Technology at STEKOM, I strive to expand my technical skills. I embrace challenges in the fast-paced tech landscape, consistently delivering innovative solutions and top-tier support.
-      </p>
-      <a href="https://drive.google.com/file/d/1L83fQbr4s8xMOpo0uj9cPtdeNkfsqAbr/view?usp=sharing" target="_blank" class="flex items-center justify-center text-white text-lg md:text-2xl mt-4">
+<!-- About Section -->
+<section id="about" class="min-h-screen flex items-center justify-center p-6 md:p-10 bg-gray-800 bg-opacity-80">
+  <div class="max-w-3xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+    <p class="text-lg leading-relaxed mb-4">
+      As an IT Technician at PT Leader IT Service Solutions, I am dedicated to deploying and maintaining mission-critical applications, including the advanced Ewacs Pro system. My responsibilities involve intricate tasks like UMPC installation, data management, and troubleshooting, enhancing my skills in IP networking and system maintenance.
+      I also gained valuable experience as a subcontractor for PT PAMA PERSADA NUSANTARA at the KPC Bengalon site, developing expertise in operational support and technology implementation.
+    </p>
+    <p class="text-lg mb-4">
+      Currently pursuing a Bachelor's degree in Information Technology at STEKOM, I strive to expand my technical skills. I embrace challenges in the fast-paced tech landscape, consistently delivering innovative solutions and top-tier support.
+    </p>
+    <div class="flex flex-col items-center mt-4">
+      <a href="https://drive.google.com/file/d/1L83fQbr4s8xMOpo0uj9cPtdeNkfsqAbr/view?usp=sharing" target="_blank" class="bg-blue-500 text-white text-base md:text-lg rounded-full px-4 py-2 flex items-center justify-center transition hover:bg-blue-600">
         <i class="fas fa-file-pdf mr-2"></i> View My CV
       </a>
+      
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Portfolio Section -->
   <section id="portfolio" class="min-h-screen p-6 md:p-10 bg-gray-900 bg-opacity-90">
     <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Portfolio</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="bg-white text-black p-6 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-semibold mb-2">Project 1</h3>
-        <p>Details about the project...</p>
+        <h3 class="text-2xl font-semibold mb-2">1</h3>
+        <p>lanjut nanti ges</p>
       </div>
       <div class="bg-white text-black p-6 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-semibold mb-2">Project 2</h3>
-        <p>Details about the project...</p>
+        <h3 class="text-2xl font-semibold mb-2">2</h3>
+        <p>bobo</p>
       </div>
       <div class="bg-white text-black p-6 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-semibold mb-2">Project 3</h3>
-        <p>Details about the project...</p>
+        <h3 class="text-2xl font-semibold mb-2">2</h3>
+        <p>cuz kerja zzz ded wanna die</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="min-h-screen p-6 md:p-10 bg-gray-800 bg-opacity-80">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Contact</h2>
-    <form class="max-w-lg mx-auto space-y-4">
-      <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-700 text-white" />
-      <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-gray-700 text-white" />
-      <textarea placeholder="Your Message" class="w-full p-3 rounded-lg bg-gray-700 text-white" rows="5"></textarea>
-      <button type="submit" class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transition w-full">Send Message</button>
-    </form>
-  </section>
+  <!-- Modal for Contact Me -->
+  <div id="contact-modal" class="hidden fixed inset-0 flex items-center justify-center backdrop-filter backdrop-blur-lg">
+    <div class="glassmorphism p-6 rounded-lg shadow-lg">
+      <button id="close-modal" class="bg-transparent text-white float-right">&times;</button>
+      <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-white" />
+        <textarea placeholder="Your Message" rows="5" required class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-white"></textarea>
+        <button type="submit" class="bg-blue-500 text-white rounded px-4 py-2">Send</button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

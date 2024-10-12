@@ -65,7 +65,32 @@ button:hover {
   animation: blink 0.8s steps(2, start) infinite;
 }
 
+/* Animation for text appearance */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-fade-out {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
+}
+
+/* Glassmorphism effect */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1); /* White with opacity */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Slight border for better visibility */
 }
