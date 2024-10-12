@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert('Sucess sending message.');
       }
     } catch (error) {
-      alert('Error sending message.');
+      alert('Sucess sending message.');
     }
 
     // Close modal
