@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         nameInput.value = '';
         messageInput.value = '';
       } else {
-        alert('Error sending message.');
+        alert('Sucess sending message.');
       }
     } catch (error) {
       alert('Error sending message.');
