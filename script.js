@@ -1,16 +1,15 @@
-// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const textElement = document.getElementById("typing-text");
+  const text = "IT Support and IT Technician";
+  let index = 0;
 
-document.getElementById("contact-btn").addEventListener("click", () => {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-  });
-  
-  window.addEventListener("scroll", () => {
-    const sections = document.querySelectorAll("section");
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        section.classList.add("animate-fade-in");
-      }
-    });
-  });
-  
+  function type() {
+    if (index < text.length) {
+      textElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 100); // Adjust typing speed here
+    }
+  }
+
+  type();
+});
