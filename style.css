@@ -1,0 +1,59 @@
+/* style.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Background gradient dan pattern */
+body {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-blend-mode: overlay;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+/* Animasi pada header */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styling untuk gambar profil */
+.profile-img-container img {
+  object-fit: contain;
+  padding: 0%;
+  transition: transform 0.5s ease;
+}
+
+.profile-img-container:hover img {
+  transform: scale(1.1);
+}
+
+/* Efek hover pada tombol */
+button {
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Styling untuk ikon sosial media */
+.social-icons a {
+  font-size: 2rem;
+  color: white;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #60a5fa; /* Warna biru saat di-hover */
+}
