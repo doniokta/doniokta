@@ -1,9 +1,8 @@
-/* style.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Background gradient dan pattern */
+/* Background gradient and pattern */
 body {
   background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
@@ -12,7 +11,7 @@ body {
   background-size: auto;
 }
 
-/* Animasi pada header */
+/* Header animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -26,7 +25,7 @@ body {
   }
 }
 
-/* Styling untuk gambar profil */
+/* Profile image styling */
 .profile-img-container img {
   object-fit: contain;
   padding: 0%;
@@ -37,7 +36,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Efek hover pada tombol */
+/* Button hover effect */
 button {
   transition: transform 0.3s ease, background-color 0.3s;
 }
@@ -46,7 +45,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Styling untuk ikon sosial media */
+/* Social media icons hover effect */
 .social-icons a {
   font-size: 2rem;
   color: white;
@@ -55,5 +54,18 @@ button:hover {
 }
 
 .social-icons a:hover {
-  color: #60a5fa; /* Warna biru saat di-hover */
+  color: #60a5fa; /* Blue hover color */
+}
+
+/* Cursor blink effect */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: white;
+  animation: blink 0.8s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
